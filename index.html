@@ -231,21 +231,25 @@
       </footer>
     </div>
     <script>
-        hamburger = document.querySelector(".hamburger");
+                hamburger = document.querySelector(".hamburger");
         hamburger.onclick = function() {
             navBar = document.querySelector(".nav-bar");
             navBar.classList.toggle("active");
         }
-        //Copy konten//
+
+        //Membuka Konteks konten//
         document.addEventListener('contextmenu', function(e) {
           e.preventDefault();
         });
+
+        //Zoom Mati//
         document.addEventListener('wheel', function(event) {
         if (event.ctrlKey) {
             event.preventDefault();
         }
         }, { passive: false });
-
+        
+        //Zoom HP Mati//
         document.addEventListener('gesturestart', function(e) {
         e.preventDefault();
         e.stopPropagation();
@@ -265,15 +269,14 @@
         if (event.target.tagName === 'IMG' || event.target.tagName === 'A') {
           event.preventDefault();
         }
-      });
+        });
 
-      document.addEventListener('dragstart', function(event) {
-        if (event.target.tagName === 'IMG' || event.target.tagName === 'A') {
-          event.preventDefault();
-        }
-      });
-
-
+        //Drag Konten Mati//
+        document.addEventListener('dragstart', function(event) {
+          if (event.target.tagName === 'IMG' || event.target.tagName === 'A') {
+            event.preventDefault();
+          }
+        });
     </script>
 </body>
 </html>
