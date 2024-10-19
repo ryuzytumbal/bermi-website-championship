@@ -265,15 +265,15 @@
         e.stopPropagation();
         }, { passive: false });
 
-        document.addEventListener('contextmenu', function(event) {
+        /*document.addEventListener('contextmenu', function(event) {
         if (event.target.tagName === 'IMG' || event.target.tagName === 'A') {
           event.preventDefault();
         }
         });
 
         //Drag Konten Mati//
-        /*document.addEventListener('dragstart', function(event) {
-          if (event.target.tagName === 'IMG' || event.target.tagName === 'A') {
+        document.addEventListener('dragstart', function(event) {
+        if (event.target.tagName === 'IMG' || event.target.tagName === 'A') {
             event.preventDefault();
           }
         });*/
