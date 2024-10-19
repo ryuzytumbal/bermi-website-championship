@@ -239,6 +239,13 @@ section h3::after {
   display: block;
   margin: 20px auto;
 }
+section h7.garis::after {
+  content: "";
+  border-bottom: 5px solid #23cb00;
+  width: 200px;
+  display: block;
+  margin: 20px auto;
+}
 #tentang,
 #team,
 #fasilitas,
