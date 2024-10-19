@@ -1,0 +1,457 @@
+html, body {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE10+/Edge */
+  user-select: none;         /* Non-prefixed version, supported by Chrome, Opera and Edge */
+  -ms-touch-action: manipulation; /* Disable zooming in IE */
+  touch-action: manipulation;     /* Disable zooming in other browsers */
+}  
+*,
+html
+body {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+.layar-dalam {
+  width: 1000px;
+  margin: auto;
+}
+.layar-penuh {
+  width: 100%;
+}
+body {
+  width: 100%;
+  height: 110vh;
+  background: url(wallhome_bermi.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 60px;
+}
+img, a {
+  -webkit-user-drag: none;
+}
+
+/* Background untuk Mobile */
+@media only screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    height: 90vh;
+    background-image: url('wallhomehp1.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}
+header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  background: #23cb00;
+  /*background-color: rgba(0, 255, 21, 0.2); /* Transparansi untuk memperlihatkan blur */
+  /*backdrop-filter: blur(10px); /* Efek blur */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
+}
+.logo {
+  font-size: 38px;
+  font-weight: bold;
+  color: #fefefe;
+  cursor: pointer;
+}
+
+.logo:hover{
+  color: #6dff50;
+  transform: rotate(1deg);
+}
+.hamburger {
+  display: none;
+}
+.more-info .area .maps-hp {
+  display: none;
+}
+/* Navigation */
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar ul li a {
+  display: block;
+  color: #fefefe;
+  font-size: 20px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  transition: .2s;
+  margin: 0 5px;
+}
+.nav-bar ul li a:hover {
+  color: #23cb00;
+  background-color: white;
+}
+.nav-bar ul li a.active {
+  color: #fefefe;
+  background: #41444B;
+}
+
+@media only screen and (max-width: 1280px) {
+  header {
+      padding: 0 50px;
+  }
+  html {
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+}
+@media only screen and (max-width: 1100px) {
+  header {
+      padding: 0 30px;
+  }
+  html {
+      overflow-y: scroll;
+      overflow-x: hidden;
+    }
+}
+@media only screen and (max-width: 900px) {
+  
+  .hamburger {
+      display: block;
+      cursor: pointer;
+  }
+  .hamburger .line {
+      width: 30px;
+      height: 3px;
+      background: #fefefe;
+      margin: 6px 0;
+  }
+  .nav-bar {
+      height: 0px;
+      position: absolute;
+      top: 99px;
+      left: 0;
+      right: 0;
+      width: 100vw;
+      background: #23cb00;
+      /*background-color: rgba(0, 255, 21, 0.2); /* Transparansi untuk memperlihatkan blur */
+      /*backdrop-filter: blur(10px); /* Efek blur */
+      border-bottom-left-radius: 250px;
+      border-bottom-right-radius: 10px;
+      transition: .3s;
+      overflow: hidden;
+  }
+  .nav-bar.active {
+      height: 450px;
+  }
+  .nav-bar ul {
+      display: block;
+      width: fit-content;
+      margin: 80px auto 0 auto;
+      text-align: center;
+      transition: .5s;
+      opacity: 0;
+  }
+  .nav-bar.active ul {
+      opacity: 1;
+  }
+  .nav-bar {
+      margin-bottom: 12px;
+  }
+  #maps {
+    display: none;
+  }
+  .more-info .area .maps-hp {
+    display: block;
+    padding-top: 20px;
+    border-radius: px 0px 5px 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    height: 200px;
+  }
+}
+
+/* Hero Section */
+#hero {
+z-index: 100;
+width: 100%;
+height: 100vh;
+text-align: center;
+padding: 250px 20px;
+margin-bottom: 5%;
+color: #fff;
+}
+
+#hero h1 {
+font-family: "Poppins", sans-serif;
+height: 25px;
+font-weight: 600;
+font-size: 38px;
+}
+
+#hero p {
+font-family: "Poppins", sans-serif;
+font-weight: bold;
+font-size: 75px;
+}
+
+/* Tombol Booking Tengah */
+#hero button {
+background-color: #23cb00;
+font-family: "Poppins", sans-serif;
+font-weight: bold;
+color: #333;
+border: none;
+border-radius: 5px;
+padding: 10px 15px;
+font-size: 1.2em;
+transition: .3s;
+margin: 0 5px;
+cursor: pointer;
+}
+#hero button:hover {
+color: #23cb00;
+background-color: white;
+border-radius: 25px;
+font-family: "Poppins", sans-serif;
+font-weight: 400;
+font-size: 1.2em;
+}
+
+/*section*/
+section {
+  padding: 50px 0px 50px 0px;
+}
+section h3 {
+  font-size: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+}
+section h3::after {
+  content: "";
+  border-bottom: 5px solid #23cb00;
+  width: 52px;
+  display: block;
+  margin: 20px auto;
+}
+#tentang,
+#team,
+#fasilitas,
+#more-info {
+  text-align: center;
+}
+section p.ringkasan {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 18px;
+  color: #ababab;
+}
+section .konten-isi p {
+  font-style: normal;
+}
+nav.putih {
+  background-color: #fff;
+}
+nav.putih .tombol-menu .garis {
+  background-color: #333;
+}
+nav.putih ul li a {
+  color: #333;
+}
+
+.credit {
+  color: #ffffff;
+}
+.credit:hover{
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  color: #343A40;
+  background-color: white;
+  transition: .2s;
+}
+
+nav .logo img.hitam {
+  display: none;
+}
+section.abuabu {
+  background-color: #f5f6f6;
+}
+.support,
+.fasilitas,
+.tim,
+.more-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.support h6,
+.fasilitas h6,
+.tim h6 {
+  margin: 0px;
+  margin-top: 20px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: bold;
+}
+.support img {
+  width: 50px;
+}
+.support div,
+.fasilitas div,
+.tim div {
+  text-align: center;
+  width: 26%;
+}
+section#gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  overflow: hidden;
+  padding: 10px 0px 10px 0px;
+}
+section#gallery div {
+  padding: 10px;
+}
+section#gallery div img {
+  height: 100px;
+  border-radius: 5px;
+}
+section#gallery div img:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.1);
+}
+
+/*Quote*/
+section.quote {
+  background: url("eco1.jpeg") no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-style: italic;
+  padding: 100px;
+}
+section.quote .layar-dalam p {
+  display: inline;
+  background: url("ico.quote-icon.png") no-repeat;
+  padding: 40px;
+}
+
+.fasilitas img,
+.tim img {
+  width: 24%;
+  border-radius: 15px;
+}
+.more-info .area {
+  width: 47%;
+  box-shadow: 0px -10px 30px #858585;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.more-info div.area div {
+  width: 50%;
+}
+.more-info .area .gambar {
+  border-radius: 5px 0px 0px 5px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  height: 380px;
+}
+.more-info .area .text article {
+  padding: 40px;
+}
+.more-info .area .text article h4 {
+  margin: 0px;
+}
+.more-info .area .text article a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.4s ease;
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+.more-info .area .text article a:hover {
+  color: #23cb00;
+}
+footer {
+  padding: 50px 0px 50px 0px;
+  background-color: #343a40;
+  color: #fff;
+}
+footer .layar-dalam {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer .layar-dalam div {
+  width: 20%;
+}
+footer .layar-dalam h5 {
+  margin-top: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+footer .layar-dalam .copyright {
+  width: 100%;
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 1px solid #666;
+  text-align: center;
+}
+@media screen and (max-width: 991.98px) {
+  .layar-dalam {
+      width: 90%;
+  }
+  nav .menu ul {
+    display: none;
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  nav .menu ul li {
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    background-color: #fff;
+    line-height: 40px;
+  }
+  nav .menu ul li a {
+    color: #333;
+  }
+  .tombol-menu {
+    display: flex;
+  }
+  .more-info .area {
+    display: block;
+  }
+  .more-info div.area div {
+    width: 100%;
+  }
+  .more-info .area .gambar {
+    border-radius: 5px 5px 0px 0px;
+    height: 200px;
+  }
+  .support {
+    display: block;
+  }
+  .support div {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+}
+
+/* All Responsive */

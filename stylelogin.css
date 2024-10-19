@@ -1,0 +1,119 @@
+html {
+    overflow-y: scroll;
+  }
+  
+  body {
+    overflow: hidden;
+  }
+  
+  html, body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+/Edge */
+    user-select: none;         /* Non-prefixed version, supported by Chrome, Opera and Edge */
+    -ms-touch-action: manipulation; /* Disable zooming in IE */
+    touch-action: manipulation;     /* Disable zooming in other browsers */
+  }  
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: Helvetica, sans-serif;
+    background: url('walldesk.jpg') no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* Background untuk Mobile */
+@media only screen and (max-width: 768px) {
+    body {
+      background-image: url('wallhp.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+.main{
+    width: 400px;
+    height: 550px;
+    background: red;
+    overflow: hidden;
+    background: transparent;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparansi untuk memperlihatkan blur */
+    backdrop-filter: blur(20px); /* Efek blur */
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+#chk{
+    display: none;
+}
+.signup{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+label{
+    color: #fff;
+    font-size: 2.3em;
+    justify-content: center;
+    display: flex;
+    margin: 60px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .7s ease-in-out;
+}
+input{
+    width: 160px;
+    height: 20px;
+    background: #fff;
+    justify-content: center;
+    display: flex;
+    margin: 20px auto;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+button{
+    width: 60%;
+    height: 40px;
+    margin: 10px auto;
+    justify-content: center;
+    display: block;
+    color: #fff;
+    background: #23cb00;
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: .2s ease-in;
+    cursor: pointer;
+}
+button:hover{
+    background: #25e000;
+}
+
+.login{
+    height: 460px;
+    background: #eee;
+    border-radius: 60% / 10%;
+    transform: translateY(-180px);
+    transition: .7s ease-in-out;
+}
+.login label{
+    color: #23cb00;
+    transform: scale(.6);
+}
+#chk:checked ~ .login{
+    transform: translateY(-500px);
+}
+#chk:checked ~ .login label{
+    transform: scale(1);
+}
+#chk:checked ~ .signup label{
+    transform: scale(.6);
+}

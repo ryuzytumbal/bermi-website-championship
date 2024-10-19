@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pembayaran Tiket</title>
+    <style>
+        body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Standard */
+}
+
+        @media only screen and (max-width: 900px) {
+        .form-group {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        width: 150px; /* Sesuaikan dengan lebar yang diinginkan */
+        margin-right: 10px;
+    }
+
+    .form-group input {
+        flex: 1; /* Agar input field mengambil sisa lebar yang tersedia */
+    }
+}
+        /* Atur margin dan padding nol untuk seluruh halaman */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Menyesuaikan tinggi penuh halaman */
+        html, body {
+            height: 100%;
+            font-family: "Poppins", sans-serif;
+            font-weight: bold;
+            background: url('walldesk.jpg') no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        /* Kontainer form disesuaikan dengan layar penuh */
+        .form-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            color: #fff;
+            padding: 60px;
+            background: transparent;
+            background-color: rgba(255, 255, 255, 0.2); /* Transparansi untuk memperlihatkan blur */
+            backdrop-filter: blur(5); /* Efek blur */
+            border-radius: 20px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+            margin: auto;
+            max-width: 100%;
+        }
+
+        .form-container form {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsif untuk layar yang lebih besar */
+        @media(min-width: 900px) {
+            .form-container {
+                max-width: 600px;
+            }
+        }
+
+        @media(min-width: 1024px) {
+            .form-container {
+                max-width: 800px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form action="#" method="POST">
+        <h2>Booking Tiket</h2>
+        <div class="form-group">
+            <label for="nama-lengkap">Nama Lengkap:</label>
+            <input type="text" id="nama-lengkap" name="nama-lengkap" required>
+        </div>
+
+        <div class="form-group">
+            <label for="tanggal-lahir">Tanggal Lahir:</label>
+            <input type="date" id="tanggal-lahir" name="tanggal-lahir" required>
+        </div>
+
+        <div class="form-group">
+            <label for="asal">Asal:</label>
+            <input type="text" id="asal" name="asal" required>
+        </div>
+
+        <div class="form-group">
+            <label for="nomor-hp">Nomor HP:</label>
+            <input type="number" id="nomor-hp" name="nomor-hp" required>
+        </div>
+
+        <div class="form-group">
+            <label for="jumlah-orang">Jumlah Orang:</label>
+            <input type="number" id="jumlah-orang" name="jumlah-orang" required min="1">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Bayar Sekarang">
+        </div>
+    </form>
+</div>
+
+<script>
+    document.addEventListener('wheel', function(event) {
+    if (event.ctrlKey) {
+        event.preventDefault();
+    }
+    }, { passive: false });
+
+    document.addEventListener('gesturestart', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    }, { passive: false });
+
+    document.addEventListener('gesturechange', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    }, { passive: false });
+
+    document.addEventListener('gestureend', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    }, { passive: false });
+    
+        // Menonaktifkan klik kanan
+        document.addEventListener('contextmenu', function(e) {
+        e.preventDefault();
+    });
+
+    // Menonaktifkan drag
+    document.addEventListener('dragstart', function(e) {
+        e.preventDefault();
+    });
+
+    // Menonaktifkan keyboard shortcuts tertentu (Ctrl+C, Ctrl+U, Ctrl+S, dll.)
+    document.addEventListener('keydown', function(e) {
+        if (e.ctrlKey && (e.key === 'c' || e.key === 'u' || e.key === 's' || e.key === 'p' || e.key === 'x' || e.key === 'a')) {
+            e.preventDefault();
+        }
+    });
+</script>
+</body>
+</html>

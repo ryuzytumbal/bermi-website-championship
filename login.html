@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Login & Sign up</title>
+    <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="Nama Depan" required="">
+                <input type="text" name="txt" placeholder="Nama Belakang" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="Password" name="pswrd" placeholder="Password" required="">
+                <button>Sign up</button>
+            </form>
+        </div>
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="emal" name="email" placeholder="Email" required>
+                <input type="Password" name="pswrd" placeholder="Password" required="">
+                <button>Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('wheel', function(event) {
+        if (event.ctrlKey) {
+            event.preventDefault();
+        }
+        }, { passive: false });
+
+        document.addEventListener('gesturestart', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        }, { passive: false });
+
+        document.addEventListener('gesturechange', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        }, { passive: false });
+
+        document.addEventListener('gestureend', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        }, { passive: false });
+    </script>
+    
+</body>
+</html>
