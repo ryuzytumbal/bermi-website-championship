@@ -242,7 +242,7 @@ section h3::after {
 section h7.garis::after {
   content: "";
   border-bottom: 5px solid #23cb00;
-  width: 500px;
+  width: 200px;
   display: block;
   margin: 20px auto;
 }
